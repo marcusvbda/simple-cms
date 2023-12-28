@@ -2,13 +2,19 @@
 module.exports = {
     darkMode: 'class',
     content: [
-        "./resources/**/*.blade.php",
-        "./resources/**/*.vue",
-        "./vendor/marcusvbda/vstack/**/*.vue",
-        "./vendor/marcusvbda/vstack/**/*.blade.php",
+        './resources/**/*.blade.php',
+        './resources/**/*.vue',
+        './vendor/marcusvbda/vstack/**/*.vue',
+        './vendor/marcusvbda/vstack/**/*.blade.php',
     ],
     theme: {
-        extend: { },
+        extend: {
+            // colors: {
+            //     blue: {
+            //         700: '#D61920',
+            //     },
+            // },
+        },
     },
     plugins: [],
-}
+};

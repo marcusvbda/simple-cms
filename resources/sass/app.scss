@@ -1,4 +1,5 @@
 @import './vendor/marcusvbda/vstack/src/Assets/scss/autoload.scss';
+// @import 'variables';
 
 body {
     @apply bg-gray-100;
@@ -27,3 +28,9 @@ a {
 .el-button.el-button--default {
     @apply bg-gray-500 hover:bg-gray-600 text-white;
 }
+
+// .vstack-btn.primary,
+// .el-button.el-button--primary {
+//     background-color: $primary;
+//     border-color: $primary;
+// }
