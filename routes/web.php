@@ -3,7 +3,7 @@
 use App\Http\Controllers\DebugController;
 
 Route::get('', function () {
-	return "home page";
+	return redirect("/admin");
 });
 
 if (config('app.env') === "homologation") {
