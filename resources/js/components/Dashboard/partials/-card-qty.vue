@@ -2,7 +2,7 @@
     <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-3/12 cursor-pointer"
         @click="$goToPage('/admin/products')">
         <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-3">
-            Interfaces
+            {{ title }}
         </h2>
         <p class="text-4xl font-bold text-gray-800 dark:text-white mb-2" v-html="card.isLoading
             ? `<i class='fas fa-spinner 
@@ -13,6 +13,7 @@
 </template>
 <script>
 export default {
+    props: ['entity', 'title'],
     data() {
         return {
             test: 1,
@@ -28,7 +29,7 @@ export default {
     methods: {
         getContent() {
             this.$set(this.card, 'isLoading', true);
-            this.$http.get('/admin/get-data/interfaceQty').then(({ data }) => {
+            this.$http.get(`/admin/get-data/${this.entity}`).then(({ data }) => {
                 this.$set(this.card, 'qty', data);
                 this.$set(this.card, 'isLoading', false);
             });

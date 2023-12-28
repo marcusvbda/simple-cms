@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Models\Integrator;
 use App\Http\Models\InterfaceModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -22,5 +23,10 @@ class DashboardController extends Controller
 	protected function interfaceQty()
 	{
 		return InterfaceModel::count();
+	}
+
+	protected function integratorsQty()
+	{
+		return Integrator::count();
 	}
 }
